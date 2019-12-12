@@ -4,8 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class Carcategory extends Model
 {
-    protected $primaryKey = "id";
+    protected $primaryKey = "catId";
     public $timestamps = false;
 }
