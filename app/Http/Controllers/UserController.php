@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Carcategory;
+use App\Car;
 
 class UserController extends Controller
 {
@@ -113,5 +115,12 @@ class UserController extends Controller
         {
             return redirect()->route('login.index');
         }
+    }
+
+    public function carList()
+    {
+        $cars = Car::all();
+        $category = Carcategory::all();
+        return view('member.carList')->with('cars', $cars)->with('category', $category);
     }
 }

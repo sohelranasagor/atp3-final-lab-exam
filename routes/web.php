@@ -48,4 +48,5 @@ Route::group(['middleware'=>['sess']], function(){
     Route::post('/member/myprofile', 'UserController@update')->name('member.update');
     Route::get('/member/delete', 'UserController@delete')->name('member.delete');
     Route::post('/member/delete', 'UserController@destroy')->name('member.destroy');
+    Route::get('/member/carList', 'UserController@carList')->name('member.carList');
 });
